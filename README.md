@@ -1,3 +1,5 @@
+Executing motion_gender_detection.py file:
+
 python motion_gender_detection.py --mode webcam
 
 python motion_gender_detection.py --mode video --file path\to\video.mp4
