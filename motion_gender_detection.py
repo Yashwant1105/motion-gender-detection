@@ -8,8 +8,7 @@ gender_list = ['Male', 'Female']
 
 # Gender detection function
 def detect_gender(face_img):
-    blob = cv2.dnn.blobFromImage(face_img, 1.0, (227, 227),
-                                 (78.426, 87.768, 114.896), swapRB=False)
+    blob = cv2.dnn.blobFromImage(face_img, 1.0, (227, 227),(78.426, 87.768, 114.896), swapRB=False)
     gender_net.setInput(blob)
     preds = gender_net.forward()
     return gender_list[preds[0].argmax()]
@@ -44,8 +43,7 @@ def process_frame(frame, prev_gray, pool):
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
     # Face detection
-    blob = cv2.dnn.blobFromImage(frame, 1.0, (300, 300),
-                                 (104.0, 177.0, 123.0), swapRB=False, crop=False)
+    blob = cv2.dnn.blobFromImage(frame, 1.0, (300, 300),(104.0, 177.0, 123.0), swapRB=False, crop=False)
     face_net.setInput(blob)
     detections = face_net.forward()
 
