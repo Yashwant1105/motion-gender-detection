@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "command": "g++",
+"args": [
+    "-IC:/opencv/build/include",
+    "-LC:/opencv/build/x64/vc16/lib",
+    "main.cpp",
+    "-o",
+    "main.exe",
+    "-lopencv_world4110"
+]
+,
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
