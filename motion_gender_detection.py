@@ -63,8 +63,6 @@ def process_frame(frame, prev_gray, pool):
                             0.7, (255, 0, 0), 2)
 
     return frame, gray, motion
-
-# Main
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', choices=['webcam', 'video', 'image'], required=True,
