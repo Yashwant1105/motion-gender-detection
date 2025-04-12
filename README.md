@@ -1,9 +1,30 @@
-Executing motion_gender_detection.py file:
+# 🎥 Motion & Gender Detection - Execution Guide
 
-python motion_gender_detection.py --mode webcam
+## 📦 Run Instructions
 
-python motion_gender_detection.py --mode video --file path\to\video.mp4
+### ▶️ Webcam Mode
 
-python motion_gender_detection.py --mode image --file path\to\image.jpg
+python motion_gender_detection.py --mode webcam --process sequential  
+python motion_gender_detection.py --mode webcam --process parallel  
+python motion_gender_detection.py --mode webcam --process parallel --save  
 
-python motion_gender_detection.py --mode webcam --save
+---
+
+### 🎞️ Video Mode
+
+python motion_gender_detection.py --mode video --file path/to/video.mp4 --process sequential  
+python motion_gender_detection.py --mode video --file path/to/video.mp4 --process parallel  
+python motion_gender_detection.py --mode video --file path/to/video.mp4 --process parallel --save  
+
+---
+
+### 🖼️ Image Mode
+
+python motion_gender_detection.py --mode image --file path/to/image.jpg  
+python motion_gender_detection.py --mode image --file path/to/image.jpg --save  
+
+---
+
+### 🛠️ Help
+
+python motion_gender_detection.py --help
